@@ -1,5 +1,5 @@
 //
-//  PromosListViewController.swift
+//  CommerceListViewController.swift
 //  Promos
 //
 //  Created by Alejandro Rodriguez on 1/15/16.
@@ -9,20 +9,18 @@
 import UIKit
 import ParseUI
 
-class PromosListViewController: PFQueryTableViewController {
+class CommerceListViewController: PFQueryTableViewController {
 
-    
     convenience init() {
         self.init(style: .Plain, className: nil)
         
-        title = NSLocalizedString("Promociones", comment: "titulo VC promociones")
-        parseClassName = Constants.PromosTable.PromosTableName
+        self.navigationController?.title = NSLocalizedString("Marcas", comment: "titulo VC marcas")
+        parseClassName = Constants.CommerceTable.CommerceTableName
         pullToRefreshEnabled = true
         paginationEnabled = true
         objectsPerPage =  Constants.CommonTableAttributes.ObjectsPerPage
-
+        
     }
-    
     
     override func queryForTable() -> PFQuery {
         let query = PFQuery(className: self.parseClassName!)
@@ -44,6 +42,7 @@ class PromosListViewController: PFQueryTableViewController {
         return query
     }
     
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {
         let cellIdentifier = "cell"
         
@@ -54,12 +53,11 @@ class PromosListViewController: PFQueryTableViewController {
         
         // Configure the cell to show todo item with a priority at the bottom
         if let object = object {
-            cell!.textLabel?.text = object[Constants.PromosTable.PromosTitle] as? String
+            cell!.textLabel?.text = object[Constants.CommerceTable.CommerceName] as? String
             
         }
         
         return cell
     }
-
 
 }

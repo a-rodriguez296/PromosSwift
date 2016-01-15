@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let promosNavVC = UINavigationController(rootViewController: promosVC)
         
         //Creacion tab marcas
-        let commerceVC = SecondViewController()
+        let commerceVC = CommerceListViewController()
         commerceVC.title = NSLocalizedString("Marcas", comment: "Titulo VC marcas")
         let marcasNavVC = UINavigationController(rootViewController: commerceVC)
         

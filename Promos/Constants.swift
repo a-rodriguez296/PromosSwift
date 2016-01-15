@@ -12,15 +12,23 @@ struct Constants {
     
     struct PromosTable {
         
-        static let PromosName = "Promo"
+        static let PromosTableName = "Promo"
         static let PromosTitle = "title"
         
     }
+    
+    struct CommerceTable {
+        static let CommerceTableName = "Commerce"
+        static let CommerceName = "commerceName"
+    }
+    
     
     struct CommonTableAttributes {
         static let CreatedAt = "createdAt"
         static let ObjectsPerPage:UInt = 25
     }
+    
+    
     
 }
 

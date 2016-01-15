@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		9162A339F27D15F99BF5DB7A /* Pods_Promos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DEBBCEC2A4A6DB4874552D /* Pods_Promos.framework */; };
 		9C90F3D61C49730400EDF45A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90F3D51C49730400EDF45A /* AppDelegate.swift */; };
-		9C90F3DA1C49730400EDF45A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90F3D91C49730400EDF45A /* SecondViewController.swift */; };
 		9C90F3DF1C49730400EDF45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C90F3DE1C49730400EDF45A /* Assets.xcassets */; };
 		9C90F3E21C49730400EDF45A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C90F3E01C49730400EDF45A /* LaunchScreen.storyboard */; };
 		9CDB9F381C4990FA0096F256 /* ParseKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CDB9F371C4990FA0096F256 /* ParseKeys.plist */; };
 		9CDB9F3A1C49918D0096F256 /* ParseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F391C49918D0096F256 /* ParseUtils.swift */; };
 		9CDB9F411C49A1C00096F256 /* PromosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F401C49A1C00096F256 /* PromosListViewController.swift */; };
 		9CDB9F431C49A4D50096F256 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F421C49A4D50096F256 /* Constants.swift */; };
+		9CDB9F461C49AAB90096F256 /* CommerceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F451C49AAB90096F256 /* CommerceListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,6 @@
 		81187DCD3937F938C56344EA /* Pods-Promos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Promos/Pods-Promos.debug.xcconfig"; sourceTree = "<group>"; };
 		9C90F3D21C49730400EDF45A /* Promos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C90F3D51C49730400EDF45A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C90F3D91C49730400EDF45A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9C90F3DE1C49730400EDF45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C90F3E11C49730400EDF45A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C90F3E31C49730400EDF45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 		9CDB9F391C49918D0096F256 /* ParseUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUtils.swift; sourceTree = "<group>"; };
 		9CDB9F401C49A1C00096F256 /* PromosListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromosListViewController.swift; sourceTree = "<group>"; };
 		9CDB9F421C49A4D50096F256 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9CDB9F451C49AAB90096F256 /* CommerceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceListViewController.swift; sourceTree = "<group>"; };
 		E1DEBBCEC2A4A6DB4874552D /* Pods_Promos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,9 +84,10 @@
 		9C90F3D41C49730400EDF45A /* Promos */ = {
 			isa = PBXGroup;
 			children = (
+				9CDB9F401C49A1C00096F256 /* PromosListViewController.swift */,
+				9CDB9F451C49AAB90096F256 /* CommerceListViewController.swift */,
 				9CDB9F3B1C4997FA0096F256 /* Utils */,
 				9C90F3D51C49730400EDF45A /* AppDelegate.swift */,
-				9C90F3D91C49730400EDF45A /* SecondViewController.swift */,
 				9C90F3DE1C49730400EDF45A /* Assets.xcassets */,
 				9CDB9F441C49A96B0096F256 /* Supporting Files */,
 			);
@@ -96,7 +97,6 @@
 		9CDB9F3B1C4997FA0096F256 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9CDB9F401C49A1C00096F256 /* PromosListViewController.swift */,
 				9CDB9F391C49918D0096F256 /* ParseUtils.swift */,
 				9CDB9F421C49A4D50096F256 /* Constants.swift */,
 			);
@@ -236,10 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CDB9F431C49A4D50096F256 /* Constants.swift in Sources */,
-				9C90F3DA1C49730400EDF45A /* SecondViewController.swift in Sources */,
 				9C90F3D61C49730400EDF45A /* AppDelegate.swift in Sources */,
 				9CDB9F411C49A1C00096F256 /* PromosListViewController.swift in Sources */,
 				9CDB9F3A1C49918D0096F256 /* ParseUtils.swift in Sources */,
+				9CDB9F461C49AAB90096F256 /* CommerceListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
