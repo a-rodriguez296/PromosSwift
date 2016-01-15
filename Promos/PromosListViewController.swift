@@ -1,5 +1,5 @@
 //
-//  SimpleTableViewController.swift
+//  PromosListViewController.swift
 //  Promos
 //
 //  Created by Alejandro Rodriguez on 1/15/16.
@@ -9,34 +9,37 @@
 import UIKit
 import ParseUI
 
-class SimpleTableViewController : PFQueryTableViewController {
+class PromosListViewController: PFQueryTableViewController {
+
     
-    override init(style: UITableViewStyle, className: String?) {
-        super.init(style: style, className: className)
-        parseClassName = "Promo"
+    convenience init() {
+        self.init(style: .Plain, className: nil)
+        
+        title = NSLocalizedString("Promociones", comment: "titulo VC promociones")
+        parseClassName = Constants.PromosTable.PromosName
         pullToRefreshEnabled = true
         paginationEnabled = true
-        objectsPerPage = 25
+        objectsPerPage =  Constants.CommonTableAttributes.ObjectsPerPage
+
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        parseClassName = "Promo"
-        pullToRefreshEnabled = true
-        paginationEnabled = true
-        objectsPerPage = 25
-    }
     
     override func queryForTable() -> PFQuery {
         let query = PFQuery(className: self.parseClassName!)
         
-        // If no objects are loaded in memory, we look to the cache first to fill the table
-        // and then subsequently do a query against the network.
-        if self.objects!.count == 0 {
+        
+        //If pull to refresh is enabled, query against the network by default
+        if(pullToRefreshEnabled == true){
+            query.cachePolicy = .NetworkOnly
+        }
+        
+        //If no objects are loaded in memory, llok first in cache and then do a network request
+        if(objects?.count == 0){
             query.cachePolicy = .CacheThenNetwork
         }
         
-        query.orderByDescending("createdAt")
+        
+        query.orderByDescending(Constants.CommonTableAttributes.CreatedAt)
         
         return query
     }
@@ -51,10 +54,12 @@ class SimpleTableViewController : PFQueryTableViewController {
         
         // Configure the cell to show todo item with a priority at the bottom
         if let object = object {
-            cell!.textLabel?.text = object["title"] as? String
+            cell!.textLabel?.text = object[Constants.PromosTable.PromosTitle] as? String
             
         }
         
         return cell
     }
+
+
 }

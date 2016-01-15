@@ -26,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientKey: clientKey)
         
         
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = UINavigationController(rootViewController:configureRootViewController())
+        window?.makeKeyAndVisible()
+        
+        
         return true
     }
     
@@ -51,6 +56,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    
+    func configureRootViewController() ->UITabBarController{
+        
+        //Creacion tab promos
+        
+        let promosVC = PromosListViewController()
+        promosVC.title = NSLocalizedString("Promociones", comment: "titulo VC promociones")
+        let promosNavVC = UINavigationController(rootViewController: promosVC)
+        
+        //Creacion tab marcas
+        let commerceVC = SecondViewController()
+        commerceVC.title = NSLocalizedString("Marcas", comment: "Titulo VC marcas")
+        let marcasNavVC = UINavigationController(rootViewController: commerceVC)
+        
+        let tabVC = UITabBarController()
+        tabVC.setViewControllers([promosNavVC, marcasNavVC], animated: true)
+        
+        return tabVC
+    }
     
 }
 
