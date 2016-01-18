@@ -11,11 +11,17 @@
 		9C90F3D61C49730400EDF45A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90F3D51C49730400EDF45A /* AppDelegate.swift */; };
 		9C90F3DF1C49730400EDF45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C90F3DE1C49730400EDF45A /* Assets.xcassets */; };
 		9C90F3E21C49730400EDF45A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C90F3E01C49730400EDF45A /* LaunchScreen.storyboard */; };
+		9CAE94D41C4C6195005058DB /* MyriadProm-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAE94D21C4C6195005058DB /* MyriadProm-Regular.otf */; };
+		9CAE94D51C4C6195005058DB /* MyriadProm-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAE94D31C4C6195005058DB /* MyriadProm-SemiBold.otf */; };
+		9CCE39281C4C5CA500CD2D2E /* PromoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE39261C4C5CA500CD2D2E /* PromoCell.swift */; };
+		9CCE39291C4C5CA500CD2D2E /* PromoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE39271C4C5CA500CD2D2E /* PromoCell.xib */; };
 		9CDB9F381C4990FA0096F256 /* ParseKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CDB9F371C4990FA0096F256 /* ParseKeys.plist */; };
 		9CDB9F3A1C49918D0096F256 /* ParseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F391C49918D0096F256 /* ParseUtils.swift */; };
 		9CDB9F411C49A1C00096F256 /* PromosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F401C49A1C00096F256 /* PromosListViewController.swift */; };
 		9CDB9F431C49A4D50096F256 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F421C49A4D50096F256 /* Constants.swift */; };
 		9CDB9F461C49AAB90096F256 /* CommerceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F451C49AAB90096F256 /* CommerceListViewController.swift */; };
+		9CDB9F481C49AFFA0096F256 /* ParseQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F471C49AFFA0096F256 /* ParseQueryViewController.swift */; };
+		9CDB9F4A1C49C0200096F256 /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F491C49C0200096F256 /* Promo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,11 +32,18 @@
 		9C90F3DE1C49730400EDF45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C90F3E11C49730400EDF45A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C90F3E31C49730400EDF45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CAE94D21C4C6195005058DB /* MyriadProm-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadProm-Regular.otf"; sourceTree = "<group>"; };
+		9CAE94D31C4C6195005058DB /* MyriadProm-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadProm-SemiBold.otf"; sourceTree = "<group>"; };
+		9CCE39261C4C5CA500CD2D2E /* PromoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoCell.swift; sourceTree = "<group>"; };
+		9CCE39271C4C5CA500CD2D2E /* PromoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromoCell.xib; sourceTree = "<group>"; };
 		9CDB9F371C4990FA0096F256 /* ParseKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ParseKeys.plist; sourceTree = "<group>"; };
 		9CDB9F391C49918D0096F256 /* ParseUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUtils.swift; sourceTree = "<group>"; };
 		9CDB9F401C49A1C00096F256 /* PromosListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromosListViewController.swift; sourceTree = "<group>"; };
 		9CDB9F421C49A4D50096F256 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9CDB9F451C49AAB90096F256 /* CommerceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceListViewController.swift; sourceTree = "<group>"; };
+		9CDB9F471C49AFFA0096F256 /* ParseQueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseQueryViewController.swift; sourceTree = "<group>"; };
+		9CDB9F491C49C0200096F256 /* Promo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promo.swift; sourceTree = "<group>"; };
+		9CDB9F4B1C49C2CF0096F256 /* Promos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Promos-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1DEBBCEC2A4A6DB4874552D /* Pods_Promos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,14 +97,52 @@
 		9C90F3D41C49730400EDF45A /* Promos */ = {
 			isa = PBXGroup;
 			children = (
+				9CDB9F3B1C4997FA0096F256 /* Utils */,
+				9CCE392B1C4C5CBC00CD2D2E /* Model */,
+				9CCE392A1C4C5CAE00CD2D2E /* Views */,
+				9CDB9F471C49AFFA0096F256 /* ParseQueryViewController.swift */,
 				9CDB9F401C49A1C00096F256 /* PromosListViewController.swift */,
 				9CDB9F451C49AAB90096F256 /* CommerceListViewController.swift */,
-				9CDB9F3B1C4997FA0096F256 /* Utils */,
 				9C90F3D51C49730400EDF45A /* AppDelegate.swift */,
 				9C90F3DE1C49730400EDF45A /* Assets.xcassets */,
 				9CDB9F441C49A96B0096F256 /* Supporting Files */,
+				9CAE94D61C4C61AE005058DB /* Resources */,
 			);
 			path = Promos;
+			sourceTree = "<group>";
+		};
+		9CAE94D61C4C61AE005058DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CAE94D21C4C6195005058DB /* MyriadProm-Regular.otf */,
+				9CAE94D31C4C6195005058DB /* MyriadProm-SemiBold.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9CAE94D71C4C649E005058DB /* Promo Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9CCE39261C4C5CA500CD2D2E /* PromoCell.swift */,
+				9CCE39271C4C5CA500CD2D2E /* PromoCell.xib */,
+			);
+			name = "Promo Cell";
+			sourceTree = "<group>";
+		};
+		9CCE392A1C4C5CAE00CD2D2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CAE94D71C4C649E005058DB /* Promo Cell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9CCE392B1C4C5CBC00CD2D2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CDB9F491C49C0200096F256 /* Promo.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		9CDB9F3B1C4997FA0096F256 /* Utils */ = {
@@ -106,6 +157,7 @@
 		9CDB9F441C49A96B0096F256 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CDB9F4B1C49C2CF0096F256 /* Promos-Bridging-Header.h */,
 				9C90F3E01C49730400EDF45A /* LaunchScreen.storyboard */,
 				9C90F3E31C49730400EDF45A /* Info.plist */,
 				9CDB9F371C4990FA0096F256 /* ParseKeys.plist */,
@@ -174,9 +226,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CAE94D51C4C6195005058DB /* MyriadProm-SemiBold.otf in Resources */,
 				9CDB9F381C4990FA0096F256 /* ParseKeys.plist in Resources */,
 				9C90F3E21C49730400EDF45A /* LaunchScreen.storyboard in Resources */,
+				9CAE94D41C4C6195005058DB /* MyriadProm-Regular.otf in Resources */,
 				9C90F3DF1C49730400EDF45A /* Assets.xcassets in Resources */,
+				9CCE39291C4C5CA500CD2D2E /* PromoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,10 +291,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CDB9F431C49A4D50096F256 /* Constants.swift in Sources */,
+				9CDB9F4A1C49C0200096F256 /* Promo.swift in Sources */,
 				9C90F3D61C49730400EDF45A /* AppDelegate.swift in Sources */,
 				9CDB9F411C49A1C00096F256 /* PromosListViewController.swift in Sources */,
 				9CDB9F3A1C49918D0096F256 /* ParseUtils.swift in Sources */,
 				9CDB9F461C49AAB90096F256 /* CommerceListViewController.swift in Sources */,
+				9CDB9F481C49AFFA0096F256 /* ParseQueryViewController.swift in Sources */,
+				9CCE39281C4C5CA500CD2D2E /* PromoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,10 +401,13 @@
 			baseConfigurationReference = 81187DCD3937F938C56344EA /* Pods-Promos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Promos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arf.Promos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Promos/Promos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -355,10 +416,12 @@
 			baseConfigurationReference = 312E15E1714C65EF5FF8D269 /* Pods-Promos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Promos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arf.Promos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Promos/Promos-Bridging-Header.h";
 			};
 			name = Release;
 		};

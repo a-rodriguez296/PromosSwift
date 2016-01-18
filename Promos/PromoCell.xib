@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MyriadProm-Regular.otf">
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="PromoCell" customModule="Promos" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TnR-Ae-DOl" customClass="PFImageView">
+                        <rect key="frame" x="8" y="9" width="51" height="51"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="TnR-Ae-DOl" secondAttribute="height" multiplier="1:1" id="etG-Te-c89"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFX-dA-zYK">
+                        <rect key="frame" x="75" y="9" width="39" height="17"/>
+                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
+                        <color key="textColor" red="0.43529411764705883" green="0.78431372549019607" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1Q-p2-xOk">
+                        <rect key="frame" x="75" y="28" width="32" height="14"/>
+                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="14"/>
+                        <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyM-qW-0ku">
+                        <rect key="frame" x="280" y="19" width="32" height="32"/>
+                        <state key="normal" backgroundImage="CutCoupon"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEr-ZG-FM5">
+                        <rect key="frame" x="75" y="47" width="30" height="13"/>
+                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="13"/>
+                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="t1Q-p2-xOk" firstAttribute="centerY" secondItem="TnR-Ae-DOl" secondAttribute="centerY" id="Cdg-ZD-18V"/>
+                    <constraint firstItem="XFX-dA-zYK" firstAttribute="top" secondItem="TnR-Ae-DOl" secondAttribute="top" id="FUH-WX-vcm"/>
+                    <constraint firstItem="hyM-qW-0ku" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GDO-ea-jB1"/>
+                    <constraint firstItem="TnR-Ae-DOl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="KuR-pr-52k"/>
+                    <constraint firstItem="XFX-dA-zYK" firstAttribute="leading" secondItem="TnR-Ae-DOl" secondAttribute="trailing" constant="16" id="VNF-Nw-fmj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hyM-qW-0ku" secondAttribute="trailing" id="eDp-gy-KHL"/>
+                    <constraint firstItem="YEr-ZG-FM5" firstAttribute="bottom" secondItem="TnR-Ae-DOl" secondAttribute="bottom" id="iFz-O8-rmf"/>
+                    <constraint firstItem="t1Q-p2-xOk" firstAttribute="leading" secondItem="XFX-dA-zYK" secondAttribute="leading" id="ieA-zJ-tHE"/>
+                    <constraint firstItem="TnR-Ae-DOl" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.16" id="kgs-K1-Z2c"/>
+                    <constraint firstItem="YEr-ZG-FM5" firstAttribute="leading" secondItem="t1Q-p2-xOk" secondAttribute="leading" id="pFG-e8-5LD"/>
+                    <constraint firstItem="TnR-Ae-DOl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tqW-Qu-fsQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgPromo" destination="TnR-Ae-DOl" id="t61-D0-w5b"/>
+                <outlet property="lblCommerceName" destination="YEr-ZG-FM5" id="Hge-i4-VRd"/>
+                <outlet property="lblSubtitle" destination="t1Q-p2-xOk" id="qPx-w3-20X"/>
+                <outlet property="lblTitle" destination="XFX-dA-zYK" id="9iU-iJ-BPN"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="CutCoupon" width="32" height="32"/>
+    </resources>
+</document>

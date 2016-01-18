@@ -11,6 +11,13 @@ import UIKit
 class ParseUtils: NSObject {
     
     
+    static func initializeParseObjects(){
+        
+        Promo.initialize()
+        
+    }
+    
+    
     static func parseKeys() -> (String, String){
         
         let path = NSBundle.mainBundle().pathForResource("ParseKeys", ofType: "plist")

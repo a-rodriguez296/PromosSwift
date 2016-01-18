@@ -28,6 +28,13 @@ struct Constants {
         static let ObjectsPerPage:UInt = 25
     }
     
+    struct PromosCell {
+        static let PromosNibName = "PromoCell"
+        static let PromosCellIdentifier = "promosCellIdentifier"
+        static let PromosCellHeight:CGFloat = 77.0
+    }
+    
+    
     
     
 }
