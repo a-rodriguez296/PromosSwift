@@ -10,6 +10,7 @@ import UIKit
 
 struct Constants {
     
+    
     struct PromosTable {
         
         static let PromosTableName = "Promo"
@@ -28,10 +29,26 @@ struct Constants {
         static let ObjectsPerPage:UInt = 25
     }
     
-    struct PromosCell {
-        static let PromosNibName = "PromoCell"
-        static let PromosCellIdentifier = "promosCellIdentifier"
-        static let PromosCellHeight:CGFloat = 77.0
+    struct Cells {
+        struct PromosCell {
+            static let PromosNibName = "PromoCell"
+            static let PromosCellIdentifier = "promosCellIdentifier"
+            static let PromosCellHeight:CGFloat = 77.0
+        }
+        
+        struct CommerceCell {
+            static let CommerceNibName = "CommerceCell"
+            static let CommerceCellIdentifier = "commerceCellIdentifier"
+            static let CommerceCellHeight:CGFloat = 77.0
+
+        }
+
+    }
+    
+    
+    struct FontNames {
+        static let MyriadRegular = "MyriadPro-Regular"
+        static let MyriadRegularSemiBold = "MyriadPro-Semibold"
     }
     
     

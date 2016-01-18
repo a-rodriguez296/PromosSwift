@@ -14,6 +14,7 @@ class ParseUtils: NSObject {
     static func initializeParseObjects(){
         
         Promo.initialize()
+        Commerce.initialize()
         
     }
     

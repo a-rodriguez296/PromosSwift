@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        
-        
+        //Appearance
+        Appearance.configureAppearance()
         
         
         // Initialize Parse.
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.rootViewController = UINavigationController(rootViewController:configureRootViewController())
+        window?.rootViewController = configureRootViewController()
         window?.makeKeyAndVisible()
         
         
@@ -81,6 +81,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return tabVC
     }
+    
+    
+    
     
 }
 

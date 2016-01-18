@@ -8,7 +8,7 @@ target 'Promos' do
 pod 'Parse'
 pod 'ParseUI'
 pod 'Alamofire'
-pod 'UrbanAirship-iOS-SDK/All'
+#pod 'UrbanAirship-iOS-SDK/All'
 
 
 end

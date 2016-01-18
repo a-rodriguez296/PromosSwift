@@ -20,22 +20,18 @@ class CommerceListViewController: ParseQueryViewController {
         paginationEnabled = true
         objectsPerPage =  Constants.CommonTableAttributes.ObjectsPerPage
         
+        
+        tableView.registerNib(UINib(nibName: Constants.Cells.CommerceCell.CommerceNibName, bundle: nil), forCellReuseIdentifier: Constants.Cells.CommerceCell.CommerceCellIdentifier)
+        
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {
-        let cellIdentifier = "cell"
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? PFTableViewCell
-        if cell == nil {
-            cell = PFTableViewCell(style: .Subtitle, reuseIdentifier: cellIdentifier)
-        }
+        let commerce = object as! Commerce
         
-        // Configure the cell to show todo item with a priority at the bottom
-        if let object = object {
-            cell!.textLabel?.text = object[Constants.CommerceTable.CommerceName] as? String
-            
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.Cells.CommerceCell.CommerceCellIdentifier) as? CommerceCell
+        cell?.configureCellWithCommerce(commerce)
         
         return cell
     }

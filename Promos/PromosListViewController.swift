@@ -22,7 +22,7 @@ class PromosListViewController: ParseQueryViewController {
         paginationEnabled = true
         objectsPerPage =  Constants.CommonTableAttributes.ObjectsPerPage
         
-        tableView.registerNib(UINib(nibName: Constants.PromosCell.PromosNibName, bundle: nil), forCellReuseIdentifier: Constants.PromosCell.PromosCellIdentifier)
+        tableView.registerNib(UINib(nibName: Constants.Cells.PromosCell.PromosNibName, bundle: nil), forCellReuseIdentifier: Constants.Cells.PromosCell.PromosCellIdentifier)
         
         
 
@@ -31,14 +31,14 @@ class PromosListViewController: ParseQueryViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {
         let promo = object as! Promo
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.PromosCell.PromosCellIdentifier) as? PromoCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.Cells.PromosCell.PromosCellIdentifier) as? PromoCell
         cell?.configureCellWithPromo(promo)
         
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return Constants.PromosCell.PromosCellHeight
+        return Constants.Cells.PromosCell.PromosCellHeight
     }
     
     

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MyriadPro-Regular.otf">
+            <string>MyriadPro-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="KGk-i7-Jjw" customClass="CommerceCell" customModule="Promos" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1si-oK-CXV">
+                        <rect key="frame" x="8" y="19" width="52" height="23"/>
+                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="23"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.7843137255" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ms-CW-xds">
+                        <rect key="frame" x="272" y="11" width="40" height="40"/>
+                        <state key="normal" backgroundImage="checkMark_disabled"/>
+                        <state key="selected" backgroundImage="checkMark_enabled"/>
+                        <connections>
+                            <action selector="didTapNotificationsButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zyt-S4-K33"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1Ms-CW-xds" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1N0-vU-UlR"/>
+                    <constraint firstItem="1si-oK-CXV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="D0P-Bz-nIc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1Ms-CW-xds" secondAttribute="trailing" id="lxI-l9-UCX"/>
+                    <constraint firstItem="1si-oK-CXV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="tyy-m7-58F"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnNotifications" destination="1Ms-CW-xds" id="MDT-jL-inx"/>
+                <outlet property="lblCommerceName" destination="1si-oK-CXV" id="K5Z-0q-fcI"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkMark_disabled" width="40" height="40"/>
+        <image name="checkMark_enabled" width="40" height="40"/>
+    </resources>
+</document>
