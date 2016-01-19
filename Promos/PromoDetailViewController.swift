@@ -9,6 +9,7 @@
 import UIKit
 import ParseUI
 import PassKit
+import Social
 
 class PromoDetailViewController: UIViewController, PKAddPassesViewControllerDelegate {
     
@@ -69,19 +70,61 @@ class PromoDetailViewController: UIViewController, PKAddPassesViewControllerDele
     @IBAction func didTapShareTweeter(sender: AnyObject) {
         
         
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
+            let tweet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            tweet.setInitialText(NSLocalizedString("Con Promo's acabo de obtener un \(promo?.title) en \(promo?.subtitle)", comment: "Texto tweet usuario compartir promoción"))
+            tweet.completionHandler = { (result) -> (Void) in
+            
+                if result == SLComposeViewControllerResult.Done {
+                    //TODO poner un tracker que la persona compartió en Twitter
+                }
+                else{
+                    //TODO poner un tracker que la persona se arrepintió de compartir en Twitter
+                }
+            
+            }
+            presentViewController(tweet, animated: true, completion: nil)
+        }
+        else{
+            //TODO poner un tracker que el usuario no tiene instalado twitter
+            showAlertForMissingSocialNetwork()
+        }
     }
 
     @IBAction func didTapShareFacebook(sender: AnyObject) {
-        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+            let facebookPost = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            facebookPost.setInitialText(NSLocalizedString("Con Promo's acabo de obtener un \(promo?.title) en \(promo?.subtitle)", comment: "Texto tweet usuario compartir promoción"))
+            facebookPost.completionHandler = {result in
+            
+                if result == SLComposeViewControllerResult.Done {
+                    //TODO poner un tracker que la persona compartió en Facebook
+                }
+                else{
+                    //TODO poner un tracker que la persona se arrepintió de compartir en Facebook
+                }
+            }
+            presentViewController(facebookPost, animated: true, completion: nil)
+        }
+        else{
+            
+            //TODO poner un tracker que el usuario no tiene instalado Facebook
+            showAlertForMissingSocialNetwork()
+        }
         
     }
-    
-    
     
     func addPassesViewControllerDidFinish(controller: PKAddPassesViewController) {
         
         
         self .dismissViewControllerAnimated(true, completion: nil)
         
+    }
+    
+    func showAlertForMissingSocialNetwork(){
+        let alert = UIAlertController(title: NSLocalizedString("Atención", comment: ""), message: NSLocalizedString("Para compartir en esta red social debes instalarla primero", comment: ""), preferredStyle: .Alert)
+        let firstAction = UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .Default, handler: nil)
+        alert.addAction(firstAction)
+        presentViewController(alert, animated: true, completion:nil)
     }
 }
