@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MyriadPro-Regular.otf">
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PromoDetailViewController" customModule="Promos" customModuleProvider="target">
+            <connections>
+                <outlet property="imgPromo" destination="u8A-UQ-Pxq" id="VDO-aD-nqo"/>
+                <outlet property="lblPromoSubtitle" destination="htA-vw-nYo" id="VyU-a5-NyL"/>
+                <outlet property="lblPromoTitle" destination="79G-Nv-yge" id="Wwt-XM-PRs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79G-Nv-yge">
+                    <rect key="frame" x="166" y="81" width="50" height="22"/>
+                    <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="22"/>
+                    <color key="textColor" red="0.43529411759999997" green="0.7843137255" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="148" y="70" width="54" height="26"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htA-vw-nYo">
+                    <rect key="frame" x="166" y="113" width="43" height="19"/>
+                    <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
+                    <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="148" y="102" width="47" height="23"/>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsK-F0-N3g">
+                    <rect key="frame" x="8" y="214" width="584" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="woC-l6-rRg"/>
+                    </constraints>
+                    <state key="normal" title="Descargar Cupón" backgroundImage="greenBackground">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapDownloadPass:" destination="-1" eventType="touchUpInside" id="5t2-Ty-91z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qs-LR-U4B">
+                    <rect key="frame" x="446" y="318" width="146" height="29"/>
+                    <state key="normal" backgroundImage="btnFacebook"/>
+                    <connections>
+                        <action selector="didTapShareFacebook:" destination="-1" eventType="touchUpInside" id="jq2-an-sZP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VE-gq-vFj">
+                    <rect key="frame" x="8" y="262" width="584" height="40"/>
+                    <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
+                    <state key="normal" title="Ver Comentarios" backgroundImage="borderBackground">
+                        <color key="titleColor" red="0.43529411759999997" green="0.7843137255" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapSeeComments:" destination="-1" eventType="touchUpInside" id="npC-kt-4rH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RZ-zk-QA4">
+                    <rect key="frame" x="8" y="318" width="146" height="29"/>
+                    <state key="normal" backgroundImage="btnTwitter"/>
+                    <connections>
+                        <action selector="didTapShareTweeter:" destination="-1" eventType="touchUpInside" id="zEE-vb-AFg"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u8A-UQ-Pxq" customClass="PFImageView">
+                    <rect key="frame" x="8" y="32" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="u8A-UQ-Pxq" secondAttribute="height" multiplier="1:1" id="QT9-Sr-Idd"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1Qs-LR-U4B" firstAttribute="centerY" secondItem="3RZ-zk-QA4" secondAttribute="centerY" id="50G-y7-5d0"/>
+                <constraint firstItem="u8A-UQ-Pxq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.25" id="5bI-WJ-CdQ"/>
+                <constraint firstItem="3VE-gq-vFj" firstAttribute="height" secondItem="UsK-F0-N3g" secondAttribute="height" id="5iO-0J-WR1"/>
+                <constraint firstItem="u8A-UQ-Pxq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.33" id="FAB-9n-tdR"/>
+                <constraint firstItem="1Qs-LR-U4B" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="FPG-aK-bvp"/>
+                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="htA-vw-nYo" secondAttribute="trailing" constant="383" id="GoU-QU-RNK"/>
+                <constraint firstItem="79G-Nv-yge" firstAttribute="leading" secondItem="u8A-UQ-Pxq" secondAttribute="trailing" constant="8" id="HEy-E8-cQJ"/>
+                <constraint firstItem="u8A-UQ-Pxq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Mnq-ia-leM"/>
+                <constraint firstItem="UsK-F0-N3g" firstAttribute="top" secondItem="u8A-UQ-Pxq" secondAttribute="bottom" constant="32" id="QV4-m7-cAE"/>
+                <constraint firstAttribute="trailingMargin" secondItem="UsK-F0-N3g" secondAttribute="trailing" id="T0p-Rg-bE5"/>
+                <constraint firstItem="u8A-UQ-Pxq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="Ts6-yf-Jli"/>
+                <constraint firstItem="htA-vw-nYo" firstAttribute="leading" secondItem="u8A-UQ-Pxq" secondAttribute="trailing" constant="8" id="b4Y-fU-ql2"/>
+                <constraint firstItem="htA-vw-nYo" firstAttribute="centerY" secondItem="u8A-UQ-Pxq" secondAttribute="centerY" constant="15" id="bkr-VM-e2I"/>
+                <constraint firstItem="3VE-gq-vFj" firstAttribute="top" secondItem="UsK-F0-N3g" secondAttribute="bottom" constant="8" id="dcl-Fu-RPD"/>
+                <constraint firstItem="3VE-gq-vFj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="eOW-xc-ZXo"/>
+                <constraint firstItem="3VE-gq-vFj" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="hfB-Af-uI6"/>
+                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="79G-Nv-yge" secondAttribute="trailing" constant="376" id="jEB-0A-6pa"/>
+                <constraint firstItem="3RZ-zk-QA4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="rkN-S4-nTn"/>
+                <constraint firstItem="79G-Nv-yge" firstAttribute="centerY" secondItem="u8A-UQ-Pxq" secondAttribute="centerY" constant="-15" id="wVE-mK-85h"/>
+                <constraint firstItem="UsK-F0-N3g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="wmS-IO-obZ"/>
+                <constraint firstItem="3RZ-zk-QA4" firstAttribute="top" secondItem="3VE-gq-vFj" secondAttribute="bottom" constant="16" id="x6z-BJ-49S"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="FAB-9n-tdR"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="5bI-WJ-CdQ"/>
+                    <include reference="FAB-9n-tdR"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="borderBackground" width="11" height="11"/>
+        <image name="btnFacebook" width="146" height="29"/>
+        <image name="btnTwitter" width="146" height="29"/>
+        <image name="greenBackground" width="11" height="11"/>
+    </resources>
+</document>

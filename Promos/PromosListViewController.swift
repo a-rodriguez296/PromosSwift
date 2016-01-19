@@ -23,9 +23,6 @@ class PromosListViewController: ParseQueryViewController {
         objectsPerPage =  Constants.CommonTableAttributes.ObjectsPerPage
         
         tableView.registerNib(UINib(nibName: Constants.Cells.PromosCell.PromosNibName, bundle: nil), forCellReuseIdentifier: Constants.Cells.PromosCell.PromosCellIdentifier)
-        
-        
-
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {
@@ -41,7 +38,12 @@ class PromosListViewController: ParseQueryViewController {
         return Constants.Cells.PromosCell.PromosCellHeight
     }
     
-    
-
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let promo = objectAtIndexPath(indexPath) as! Promo
+        
+        let detailVC = PromoDetailViewController(promo: promo)
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+    }
 
 }

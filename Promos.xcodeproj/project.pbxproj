@@ -21,6 +21,9 @@
 		9CAE94EF1C4C8283005058DB /* Commerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAE94EE1C4C8283005058DB /* Commerce.swift */; };
 		9CCE39281C4C5CA500CD2D2E /* PromoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE39261C4C5CA500CD2D2E /* PromoCell.swift */; };
 		9CCE39291C4C5CA500CD2D2E /* PromoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE39271C4C5CA500CD2D2E /* PromoCell.xib */; };
+		9CD75C9D1C4DC66B00879137 /* PromoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD75C9B1C4DC66B00879137 /* PromoDetailViewController.swift */; };
+		9CD75C9E1C4DC66B00879137 /* PromoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD75C9C1C4DC66B00879137 /* PromoDetailViewController.xib */; };
+		9CD75CA01C4DD9DE00879137 /* UrbanAirshipService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD75C9F1C4DD9DE00879137 /* UrbanAirshipService.swift */; };
 		9CDB9F381C4990FA0096F256 /* ParseKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CDB9F371C4990FA0096F256 /* ParseKeys.plist */; };
 		9CDB9F3A1C49918D0096F256 /* ParseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F391C49918D0096F256 /* ParseUtils.swift */; };
 		9CDB9F411C49A1C00096F256 /* PromosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F401C49A1C00096F256 /* PromosListViewController.swift */; };
@@ -48,6 +51,9 @@
 		9CAE94EE1C4C8283005058DB /* Commerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commerce.swift; sourceTree = "<group>"; };
 		9CCE39261C4C5CA500CD2D2E /* PromoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoCell.swift; sourceTree = "<group>"; };
 		9CCE39271C4C5CA500CD2D2E /* PromoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromoCell.xib; sourceTree = "<group>"; };
+		9CD75C9B1C4DC66B00879137 /* PromoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoDetailViewController.swift; sourceTree = "<group>"; };
+		9CD75C9C1C4DC66B00879137 /* PromoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromoDetailViewController.xib; sourceTree = "<group>"; };
+		9CD75C9F1C4DD9DE00879137 /* UrbanAirshipService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrbanAirshipService.swift; sourceTree = "<group>"; };
 		9CDB9F371C4990FA0096F256 /* ParseKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ParseKeys.plist; sourceTree = "<group>"; };
 		9CDB9F391C49918D0096F256 /* ParseUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUtils.swift; sourceTree = "<group>"; };
 		9CDB9F401C49A1C00096F256 /* PromosListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromosListViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 		9C90F3D41C49730400EDF45A /* Promos */ = {
 			isa = PBXGroup;
 			children = (
+				9CD75CA21C4DEA7100879137 /* Services */,
 				9CDB9F3B1C4997FA0096F256 /* Utils */,
 				9CCE392B1C4C5CBC00CD2D2E /* Model */,
 				9CCE392A1C4C5CAE00CD2D2E /* Views */,
@@ -145,6 +152,7 @@
 				9CDB9F471C49AFFA0096F256 /* ParseQueryViewController.swift */,
 				9CAE94D91C4C71F3005058DB /* Promos List */,
 				9CAE94DA1C4C71FA005058DB /* Commerce List */,
+				9CD75CA11C4DEA6600879137 /* Promo Detail */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +208,23 @@
 				9CAE94EE1C4C8283005058DB /* Commerce.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		9CD75CA11C4DEA6600879137 /* Promo Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9CD75C9B1C4DC66B00879137 /* PromoDetailViewController.swift */,
+				9CD75C9C1C4DC66B00879137 /* PromoDetailViewController.xib */,
+			);
+			name = "Promo Detail";
+			sourceTree = "<group>";
+		};
+		9CD75CA21C4DEA7100879137 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9CD75C9F1C4DD9DE00879137 /* UrbanAirshipService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		9CDB9F3B1C4997FA0096F256 /* Utils */ = {
@@ -289,6 +314,7 @@
 				9C90F3E21C49730400EDF45A /* LaunchScreen.storyboard in Resources */,
 				9C90F3DF1C49730400EDF45A /* Assets.xcassets in Resources */,
 				9CAE94E51C4C7C3B005058DB /* MyriadPro-SemiBold.otf in Resources */,
+				9CD75C9E1C4DC66B00879137 /* PromoDetailViewController.xib in Resources */,
 				9CAE94EC1C4C8138005058DB /* CommerceCell.xib in Resources */,
 				9CCE39291C4C5CA500CD2D2E /* PromoCell.xib in Resources */,
 			);
@@ -350,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CAE94EB1C4C8138005058DB /* CommerceCell.swift in Sources */,
+				9CD75CA01C4DD9DE00879137 /* UrbanAirshipService.swift in Sources */,
 				9CAE94DC1C4C7272005058DB /* ColorUtils.swift in Sources */,
 				9CDB9F431C49A4D50096F256 /* Constants.swift in Sources */,
 				9CDB9F4A1C49C0200096F256 /* Promo.swift in Sources */,
@@ -362,6 +389,7 @@
 				9CAE94EF1C4C8283005058DB /* Commerce.swift in Sources */,
 				9CDB9F481C49AFFA0096F256 /* ParseQueryViewController.swift in Sources */,
 				9CCE39281C4C5CA500CD2D2E /* PromoCell.swift in Sources */,
+				9CD75C9D1C4DC66B00879137 /* PromoDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
