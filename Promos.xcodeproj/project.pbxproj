@@ -22,6 +22,7 @@
 		9CAE94EF1C4C8283005058DB /* Commerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAE94EE1C4C8283005058DB /* Commerce.swift */; };
 		9CC981321C4E910300FE59D3 /* PromosBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC981301C4E910300FE59D3 /* PromosBannerView.swift */; };
 		9CC981331C4E910300FE59D3 /* PromosBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC981311C4E910300FE59D3 /* PromosBannerView.xib */; };
+		9CC981371C4EE2D700FE59D3 /* PromosBannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC981361C4EE2D700FE59D3 /* PromosBannerDelegate.swift */; };
 		9CCE39281C4C5CA500CD2D2E /* PromoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE39261C4C5CA500CD2D2E /* PromoCell.swift */; };
 		9CCE39291C4C5CA500CD2D2E /* PromoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE39271C4C5CA500CD2D2E /* PromoCell.xib */; };
 		9CD75C9D1C4DC66B00879137 /* PromoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD75C9B1C4DC66B00879137 /* PromoDetailViewController.swift */; };
@@ -54,6 +55,7 @@
 		9CAE94EE1C4C8283005058DB /* Commerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commerce.swift; sourceTree = "<group>"; };
 		9CC981301C4E910300FE59D3 /* PromosBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromosBannerView.swift; sourceTree = "<group>"; };
 		9CC981311C4E910300FE59D3 /* PromosBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromosBannerView.xib; sourceTree = "<group>"; };
+		9CC981361C4EE2D700FE59D3 /* PromosBannerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromosBannerDelegate.swift; sourceTree = "<group>"; };
 		9CCE39261C4C5CA500CD2D2E /* PromoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoCell.swift; sourceTree = "<group>"; };
 		9CCE39271C4C5CA500CD2D2E /* PromoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromoCell.xib; sourceTree = "<group>"; };
 		9CD75C9B1C4DC66B00879137 /* PromoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoDetailViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				9CAE94ED1C4C8140005058DB /* Commerce Cell */,
 				9CC981301C4E910300FE59D3 /* PromosBannerView.swift */,
 				9CC981311C4E910300FE59D3 /* PromosBannerView.xib */,
+				9CC981361C4EE2D700FE59D3 /* PromosBannerDelegate.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				9CDB9F481C49AFFA0096F256 /* ParseQueryViewController.swift in Sources */,
 				9CCE39281C4C5CA500CD2D2E /* PromoCell.swift in Sources */,
 				9CD75C9D1C4DC66B00879137 /* PromoDetailViewController.swift in Sources */,
+				9CC981371C4EE2D700FE59D3 /* PromosBannerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

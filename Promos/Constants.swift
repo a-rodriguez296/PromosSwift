@@ -46,10 +46,16 @@ struct Constants {
 
     }
     
-    
     struct FontNames {
         static let MyriadRegular = "MyriadPro-Regular"
         static let MyriadRegularSemiBold = "MyriadPro-Semibold"
+    }
+    
+    struct Animations {
+        struct PromosBanner {
+            static let ScrollSpeed = 0.7
+            static let AutomaticScrollDelay = 2.5
+        }
     }
     
     

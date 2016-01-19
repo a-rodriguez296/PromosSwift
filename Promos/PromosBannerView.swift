@@ -12,7 +12,6 @@ import iCarousel
 
 class PromosBannerView: UIView, iCarouselDataSource, iCarouselDelegate {
     
-    
     @IBOutlet weak var carousel: iCarousel!
     
     
@@ -24,20 +23,22 @@ class PromosBannerView: UIView, iCarouselDataSource, iCarouselDelegate {
     
     var objects:Array<AnyObject>?{
         didSet{
-            NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: "carouselMoveToNext", object: nil)
-            
+            NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: "moveToNext", object: nil)
             carousel.reloadData()
+            moveToNext()
         }
     }
     
+    var delegate:PromosBannerDelegate?
     
-    func carouselMoveToNext(){
+    
+    func moveToNext(){
         
         var nextInt = carousel.currentItemIndex
         nextInt++
         
-        carousel.scrollToItemAtIndex(nextInt, duration: 0.6)
-        performSelector("carouselMoveToNext", withObject: nil, afterDelay: 0.3)
+        carousel.scrollToItemAtIndex(nextInt, duration: Constants.Animations.PromosBanner.ScrollSpeed)
+        performSelector("moveToNext", withObject: nil, afterDelay: Constants.Animations.PromosBanner.AutomaticScrollDelay)
     }
     
     
@@ -55,10 +56,7 @@ class PromosBannerView: UIView, iCarouselDataSource, iCarouselDelegate {
         var imgView:PFImageView?
         let promo = objects![index] as! Promo
         let featuredImageFile = promo.featuredImage
-        
-        if view == nil {
-            imgView = PFImageView(frame: frame)
-        }
+        imgView = PFImageView(frame: frame)
         imgView?.file = featuredImageFile
         imgView?.loadInBackground()
         imgView?.contentMode = .ScaleToFill
@@ -80,11 +78,16 @@ class PromosBannerView: UIView, iCarouselDataSource, iCarouselDelegate {
     }
     
     func carouselWillBeginDragging(carousel: iCarousel) {
-         NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: "carouselMoveToNext", object: nil)
+        NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: "moveToNext", object: nil)
     }
     
     func carouselDidEndDecelerating(carousel: iCarousel) {
-        performSelector("carouselMoveToNext", withObject: nil, afterDelay: 0.3)
+        performSelector("moveToNext", withObject: nil, afterDelay: Constants.Animations.PromosBanner.AutomaticScrollDelay)
+    }
+    
+    func carousel(carousel: iCarousel, didSelectItemAtIndex index: Int) {
+        let promo = objects![index] as! Promo
+        delegate?.promosBanner(self, didTouchBannerAtIndex: index, promoObject: promo)
     }
     
     
