@@ -15,6 +15,7 @@ struct Constants {
         
         static let PromosTableName = "Promo"
         static let PromosTitle = "title"
+        static let PromosIsFeatured = "featured"
         
     }
     

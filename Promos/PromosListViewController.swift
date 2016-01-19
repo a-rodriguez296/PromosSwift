@@ -8,9 +8,12 @@
 
 import UIKit
 import ParseUI
+import Parse
 
 class PromosListViewController: ParseQueryViewController {
 
+    
+    var promosBanner:PromosBannerView?
 
     
     convenience init() {
@@ -23,6 +26,29 @@ class PromosListViewController: ParseQueryViewController {
         objectsPerPage =  Constants.CommonTableAttributes.ObjectsPerPage
         
         tableView.registerNib(UINib(nibName: Constants.Cells.PromosCell.PromosNibName, bundle: nil), forCellReuseIdentifier: Constants.Cells.PromosCell.PromosCellIdentifier)
+        
+        
+        promosBanner = NSBundle.mainBundle().loadNibNamed("PromosBannerView", owner: self, options: nil).first as? PromosBannerView
+        tableView.tableHeaderView = promosBanner
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        let featuredQuery = PFQuery(className: Constants.PromosTable.PromosTableName)
+        featuredQuery.whereKey(Constants.PromosTable.PromosIsFeatured, equalTo:true)
+        featuredQuery.cachePolicy = .CacheThenNetwork
+        featuredQuery.limit = 3
+        featuredQuery.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
+            
+            self.promosBanner?.objects = objects
+        }
+        
+        
+        promosBanner?.frame = CGRectMake(0, 0, view.frame.width, 150)
+        promosBanner?.layoutSubviews()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {

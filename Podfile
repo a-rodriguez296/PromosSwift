@@ -8,6 +8,7 @@ target 'Promos' do
 pod 'Parse'
 pod 'ParseUI'
 pod 'Alamofire'
+pod 'iCarousel'
 #pod 'UrbanAirship-iOS-SDK/All'
 
 
