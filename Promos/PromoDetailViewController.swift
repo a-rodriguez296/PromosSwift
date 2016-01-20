@@ -48,7 +48,7 @@ class PromoDetailViewController: UIViewController, PKAddPassesViewControllerDele
     
     @IBAction func didTapDownloadPass(sender: AnyObject) {
         
-        UrbanAirshipService.dowloadPass(promo!.passURL) { (data) -> (Void) in
+        UrbanAirshipService.dowloadPass(promo!.passURL) { [unowned self] (data) -> (Void) in
             
             
             if PKPassLibrary.isPassLibraryAvailable(){
@@ -58,17 +58,14 @@ class PromoDetailViewController: UIViewController, PKAddPassesViewControllerDele
                 
                 passVC.delegate = self
                 self.presentViewController(passVC, animated: true, completion: nil)
-                
             }
         }
-        
     }
     
     @IBAction func didTapSeeComments(sender: AnyObject) {
     }
     
     @IBAction func didTapShareTweeter(sender: AnyObject) {
-        
         
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
             let tweet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
@@ -81,7 +78,6 @@ class PromoDetailViewController: UIViewController, PKAddPassesViewControllerDele
                 else{
                     //TODO poner un tracker que la persona se arrepintió de compartir en Twitter
                 }
-            
             }
             presentViewController(tweet, animated: true, completion: nil)
         }
@@ -111,11 +107,9 @@ class PromoDetailViewController: UIViewController, PKAddPassesViewControllerDele
             //TODO poner un tracker que el usuario no tiene instalado Facebook
             showAlertForMissingSocialNetwork()
         }
-        
     }
     
     func addPassesViewControllerDidFinish(controller: PKAddPassesViewController) {
-        
         
         self .dismissViewControllerAnimated(true, completion: nil)
         

@@ -64,6 +64,7 @@ class PromosListViewController: ParseQueryViewController, PromosBannerDelegate {
         let promo = objectAtIndexPath(indexPath) as! Promo
         
         let detailVC = PromoDetailViewController(promo: promo)
+        detailVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(detailVC, animated: true)
         
     }

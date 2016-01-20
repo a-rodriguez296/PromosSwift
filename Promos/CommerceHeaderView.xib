@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MyriadPro-Regular.otf">
+            <string>MyriadPro-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommerceHeaderView" customModule="Promos" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="hSh-Nm-i86"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="509" height="126"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activa las notificaciones en las marcas que desees" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeN-ZX-qJc">
+                    <rect key="frame" x="123" y="71" width="264" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="264" id="KT8-XU-k4H"/>
+                        <constraint firstAttribute="height" constant="40" id="wEz-Vh-wfH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
+                    <color key="textColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Notification" translatesAutoresizingMaskIntoConstraints="NO" id="GXg-7V-yTQ">
+                    <rect key="frame" x="226" y="16" width="57" height="45"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="GXg-7V-yTQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="8" id="5Kx-Ki-W4W"/>
+                <constraint firstItem="YeN-ZX-qJc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6lW-ze-CAd"/>
+                <constraint firstItem="GXg-7V-yTQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AJI-UH-y6E"/>
+                <constraint firstItem="YeN-ZX-qJc" firstAttribute="top" secondItem="GXg-7V-yTQ" secondAttribute="bottom" constant="10" id="CJG-qI-x4f"/>
+                <constraint firstItem="YeN-ZX-qJc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fcs-nA-f8a"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="727.5" y="401"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon_Notification" width="57" height="45"/>
+    </resources>
+</document>

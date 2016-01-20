@@ -89,7 +89,4 @@ class PromosBannerView: UIView, iCarouselDataSource, iCarouselDelegate {
         let promo = objects![index] as! Promo
         delegate?.promosBanner(self, didTouchBannerAtIndex: index, promoObject: promo)
     }
-    
-    
-    
 }

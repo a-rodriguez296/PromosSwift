@@ -40,7 +40,7 @@ struct Constants {
         struct CommerceCell {
             static let CommerceNibName = "CommerceCell"
             static let CommerceCellIdentifier = "commerceCellIdentifier"
-            static let CommerceCellHeight:CGFloat = 77.0
+            static let CommerceCellHeight:CGFloat = 73.0
 
         }
 

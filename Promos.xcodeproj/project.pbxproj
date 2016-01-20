@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9162A339F27D15F99BF5DB7A /* Pods_Promos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DEBBCEC2A4A6DB4874552D /* Pods_Promos.framework */; };
 		9C03A4F41C4E87A60026F5B2 /* ParseKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C03A4F31C4E87A60026F5B2 /* ParseKeys.plist */; };
+		9C58EBC31C50443500FAEC71 /* CommerceHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C58EBC21C50443500FAEC71 /* CommerceHeaderView.xib */; };
+		9C58EBC61C5044E200FAEC71 /* CommerceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58EBC51C5044E200FAEC71 /* CommerceHeaderView.swift */; };
 		9C90F3D61C49730400EDF45A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90F3D51C49730400EDF45A /* AppDelegate.swift */; };
 		9C90F3DF1C49730400EDF45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C90F3DE1C49730400EDF45A /* Assets.xcassets */; };
 		9C90F3E21C49730400EDF45A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C90F3E01C49730400EDF45A /* LaunchScreen.storyboard */; };
@@ -40,6 +42,8 @@
 		312E15E1714C65EF5FF8D269 /* Pods-Promos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Promos/Pods-Promos.release.xcconfig"; sourceTree = "<group>"; };
 		81187DCD3937F938C56344EA /* Pods-Promos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Promos/Pods-Promos.debug.xcconfig"; sourceTree = "<group>"; };
 		9C03A4F31C4E87A60026F5B2 /* ParseKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ParseKeys.plist; sourceTree = "<group>"; };
+		9C58EBC21C50443500FAEC71 /* CommerceHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommerceHeaderView.xib; sourceTree = "<group>"; };
+		9C58EBC51C5044E200FAEC71 /* CommerceHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceHeaderView.swift; sourceTree = "<group>"; };
 		9C90F3D21C49730400EDF45A /* Promos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C90F3D51C49730400EDF45A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C90F3DE1C49730400EDF45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,11 +107,21 @@
 		9C58EBBA1C500E9200FAEC71 /* Banner */ = {
 			isa = PBXGroup;
 			children = (
+				9C58EBC41C5044D000FAEC71 /* Promos Banner */,
+				9C58EBC21C50443500FAEC71 /* CommerceHeaderView.xib */,
+				9C58EBC51C5044E200FAEC71 /* CommerceHeaderView.swift */,
+			);
+			name = Banner;
+			sourceTree = "<group>";
+		};
+		9C58EBC41C5044D000FAEC71 /* Promos Banner */ = {
+			isa = PBXGroup;
+			children = (
 				9CC981361C4EE2D700FE59D3 /* PromosBannerDelegate.swift */,
 				9CC981301C4E910300FE59D3 /* PromosBannerView.swift */,
 				9CC981311C4E910300FE59D3 /* PromosBannerView.xib */,
 			);
-			name = Banner;
+			name = "Promos Banner";
 			sourceTree = "<group>";
 		};
 		9C90F3C91C49730400EDF45A = {
@@ -332,6 +346,7 @@
 				9C90F3E21C49730400EDF45A /* LaunchScreen.storyboard in Resources */,
 				9C90F3DF1C49730400EDF45A /* Assets.xcassets in Resources */,
 				9CAE94E51C4C7C3B005058DB /* MyriadPro-SemiBold.otf in Resources */,
+				9C58EBC31C50443500FAEC71 /* CommerceHeaderView.xib in Resources */,
 				9CD75C9E1C4DC66B00879137 /* PromoDetailViewController.xib in Resources */,
 				9CAE94EC1C4C8138005058DB /* CommerceCell.xib in Resources */,
 				9CCE39291C4C5CA500CD2D2E /* PromoCell.xib in Resources */,
@@ -395,6 +410,7 @@
 			files = (
 				9CAE94EB1C4C8138005058DB /* CommerceCell.swift in Sources */,
 				9CD75CA01C4DD9DE00879137 /* UrbanAirshipService.swift in Sources */,
+				9C58EBC61C5044E200FAEC71 /* CommerceHeaderView.swift in Sources */,
 				9CC981321C4E910300FE59D3 /* PromosBannerView.swift in Sources */,
 				9CAE94DC1C4C7272005058DB /* ColorUtils.swift in Sources */,
 				9CDB9F431C49A4D50096F256 /* Constants.swift in Sources */,
