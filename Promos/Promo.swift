@@ -22,12 +22,6 @@ class Promo: PFObject, PFSubclassing {
     @NSManaged var passURL: String
     @NSManaged var commerceName: String
     
-    
-    class func parseClassName() -> String {
-        return Constants.PromosTable.PromosTableName;
-    }
-    
-    
     override class func initialize(){
         var onceToken: dispatch_once_t = 0
         dispatch_once(&onceToken) {
@@ -39,4 +33,19 @@ class Promo: PFObject, PFSubclassing {
     override var description:String{
         return self.title
     }
+    
+    class func parseClassName() -> String {
+        return Constants.PromosTable.PromosTableName;
+    }
+    
+    class func bannerQuery() -> PFQuery{
+        let bannerQuery = PFQuery(className: parseClassName())
+        bannerQuery.whereKey(Constants.PromosTable.PromosIsFeatured, equalTo:true)
+        bannerQuery.cachePolicy = .CacheThenNetwork
+        bannerQuery.limit = 3
+        return bannerQuery
+    }
+    
+    
+    
 }

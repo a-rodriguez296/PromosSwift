@@ -14,21 +14,18 @@ class PromosListViewController: ParseQueryViewController, PromosBannerDelegate {
 
     
     var promosBanner:PromosBannerView?
+    
+    convenience init() {
+        self.init(style: .Plain, className: Constants.PromosTable.PromosTableName)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-    }
-    
-    convenience init() {
-        self.init(style: .Plain, className: nil)
         
         title = NSLocalizedString("Promociones", comment: "titulo VC promociones")
-        parseClassName = Constants.PromosTable.PromosTableName
-        pullToRefreshEnabled = true
-        paginationEnabled = true
-        objectsPerPage =  Constants.CommonTableAttributes.ObjectsPerPage
+        
         
         tableView.registerNib(UINib(nibName: Constants.Cells.PromosCell.PromosNibName, bundle: nil), forCellReuseIdentifier: Constants.Cells.PromosCell.PromosCellIdentifier)
         
@@ -36,22 +33,15 @@ class PromosListViewController: ParseQueryViewController, PromosBannerDelegate {
         promosBanner = NSBundle.mainBundle().loadNibNamed("PromosBannerView", owner: self, options: nil).first as? PromosBannerView
         promosBanner?.delegate = self
         tableView.tableHeaderView = promosBanner
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        
-        let featuredQuery = PFQuery(className: Constants.PromosTable.PromosTableName)
-        featuredQuery.whereKey(Constants.PromosTable.PromosIsFeatured, equalTo:true)
-        featuredQuery.cachePolicy = .CacheThenNetwork
-        featuredQuery.limit = 3
-        featuredQuery.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
+        Promo.bannerQuery().findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
             
             self.promosBanner?.objects = objects
         }
-        
         
         promosBanner?.frame = CGRectMake(0, 0, view.frame.width, 150)
         promosBanner?.layoutSubviews()

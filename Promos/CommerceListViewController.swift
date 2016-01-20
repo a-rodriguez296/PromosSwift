@@ -12,17 +12,16 @@ import ParseUI
 class CommerceListViewController: ParseQueryViewController {
 
     convenience init() {
-        self.init(style: .Plain, className: nil)
-        
-        self.navigationController?.title = NSLocalizedString("Marcas", comment: "titulo VC marcas")
-        parseClassName = Constants.CommerceTable.CommerceTableName
-        pullToRefreshEnabled = true
-        paginationEnabled = true
-        objectsPerPage =  Constants.CommonTableAttributes.ObjectsPerPage
-        
-        
+        self.init(style: .Plain, className: Constants.CommerceTable.CommerceTableName)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.registerNib(UINib(nibName: Constants.Cells.CommerceCell.CommerceNibName, bundle: nil), forCellReuseIdentifier: Constants.Cells.CommerceCell.CommerceCellIdentifier)
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+       self.navigationController?.title = NSLocalizedString("Marcas", comment: "titulo VC marcas") 
     }
     
     

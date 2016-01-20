@@ -100,6 +100,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9C58EBBA1C500E9200FAEC71 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				9CC981361C4EE2D700FE59D3 /* PromosBannerDelegate.swift */,
+				9CC981301C4E910300FE59D3 /* PromosBannerView.swift */,
+				9CC981311C4E910300FE59D3 /* PromosBannerView.xib */,
+			);
+			name = Banner;
+			sourceTree = "<group>";
+		};
 		9C90F3C91C49730400EDF45A = {
 			isa = PBXGroup;
 			children = (
@@ -203,9 +213,7 @@
 			children = (
 				9CAE94D71C4C649E005058DB /* Promo Cell */,
 				9CAE94ED1C4C8140005058DB /* Commerce Cell */,
-				9CC981301C4E910300FE59D3 /* PromosBannerView.swift */,
-				9CC981311C4E910300FE59D3 /* PromosBannerView.xib */,
-				9CC981361C4EE2D700FE59D3 /* PromosBannerDelegate.swift */,
+				9C58EBBA1C500E9200FAEC71 /* Banner */,
 			);
 			name = Views;
 			sourceTree = "<group>";

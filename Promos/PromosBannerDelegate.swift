@@ -8,7 +8,7 @@
 
 import Parse
 
-protocol PromosBannerDelegate{
+protocol PromosBannerDelegate: class{
     
     func promosBanner(banner: PromosBannerView, didTouchBannerAtIndex index: Int, promoObject  object:Promo)
     

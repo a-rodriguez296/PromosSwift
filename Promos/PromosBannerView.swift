@@ -29,7 +29,7 @@ class PromosBannerView: UIView, iCarouselDataSource, iCarouselDelegate {
         }
     }
     
-    var delegate:PromosBannerDelegate?
+    weak var delegate:PromosBannerDelegate?
     
     
     func moveToNext(){

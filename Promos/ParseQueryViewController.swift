@@ -12,6 +12,19 @@ import ParseUI
 class ParseQueryViewController: PFQueryTableViewController {
 
 
+    override init(style: UITableViewStyle, className: String?) {
+        super.init(style: style, className: className)
+        pullToRefreshEnabled = true
+        paginationEnabled = true
+        objectsPerPage =  Constants.CommonTableAttributes.ObjectsPerPage
+    }
+        
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+
     
     override func queryForTable() -> PFQuery {
         let query = PFQuery(className: self.parseClassName!)
