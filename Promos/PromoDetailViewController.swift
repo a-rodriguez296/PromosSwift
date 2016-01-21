@@ -110,9 +110,7 @@ class PromoDetailViewController: UIViewController, PKAddPassesViewControllerDele
     }
     
     func addPassesViewControllerDidFinish(controller: PKAddPassesViewController) {
-        
         self .dismissViewControllerAnimated(true, completion: nil)
-        
     }
     
     func showAlertForMissingSocialNetwork(){

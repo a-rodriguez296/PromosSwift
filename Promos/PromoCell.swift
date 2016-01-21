@@ -20,7 +20,7 @@ class PromoCell: PFTableViewCell {
     
     @IBOutlet weak var lblCommerceName: UILabel!
     
-    
+    weak var delegate:PromosCellDelegate?
     
     
     override func awakeFromNib() {
@@ -30,8 +30,9 @@ class PromoCell: PFTableViewCell {
         selectionStyle = .None
     }
     
-    func configureCellWithPromo(promo: Promo){
+    func configureCellWithPromo<T:PromosCellDelegate>(promo: Promo, parentViewController vc:T){
         
+        delegate = vc
         
         lblTitle.text = promo.title
         lblSubtitle.text = promo.subtitle
@@ -50,5 +51,10 @@ class PromoCell: PFTableViewCell {
         imgPromo.image = nil
     }
     
+    
+    @IBAction func didTapDownloadPass(sender: AnyObject) {
+        
+        delegate?.promosCell(didTapDonwloadPassWithCell: self)
+    }
     
 }

@@ -45,6 +45,9 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyM-qW-0ku">
                         <rect key="frame" x="280" y="21" width="32" height="32"/>
                         <state key="normal" backgroundImage="CutCoupon"/>
+                        <connections>
+                            <action selector="didTapDownloadPass:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sFY-bo-0hL"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEr-ZG-FM5">
                         <rect key="frame" x="66" y="45" width="30" height="13"/>

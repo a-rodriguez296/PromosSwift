@@ -9,8 +9,9 @@
 import UIKit
 import ParseUI
 import Parse
+import PassKit
 
-class PromosListViewController: ParseQueryViewController, PromosBannerDelegate {
+class PromosListViewController: ParseQueryViewController, PromosBannerDelegate, PromosCellDelegate, PKAddPassesViewControllerDelegate {
 
     
     var promosBanner:PromosBannerView?
@@ -51,7 +52,7 @@ class PromosListViewController: ParseQueryViewController, PromosBannerDelegate {
         let promo = object as! Promo
         
         let cell = tableView.dequeueReusableCellWithIdentifier(Constants.Cells.PromosCell.PromosCellIdentifier) as? PromoCell
-        cell?.configureCellWithPromo(promo)
+        cell?.configureCellWithPromo(promo, parentViewController: self)
         
         return cell
     }
@@ -74,6 +75,28 @@ class PromosListViewController: ParseQueryViewController, PromosBannerDelegate {
         let detailVC = PromoDetailViewController(promo: object)
         navigationController?.pushViewController(detailVC, animated: true)
         
+    }
+    
+    func promosCell(didTapDonwloadPassWithCell cell: PromoCell) {
+        let indexPath = tableView.indexPathForCell(cell)
+        let promo = objectAtIndexPath(indexPath) as! Promo
+        
+        
+        UrbanAirshipService.dowloadPass(promo.passURL) { [unowned self] (data) -> (Void) in
+            
+            if PKPassLibrary.isPassLibraryAvailable(){
+                
+                let newPass = PKPass(data: data, error: nil)
+                let passVC = PKAddPassesViewController(pass: newPass)
+                
+                passVC.delegate = self
+                self.presentViewController(passVC, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func addPassesViewControllerDidFinish(controller: PKAddPassesViewController) {
+        self .dismissViewControllerAnimated(true, completion: nil)
     }
 
 }

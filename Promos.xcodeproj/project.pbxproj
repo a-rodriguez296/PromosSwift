@@ -11,6 +11,7 @@
 		9C03A4F41C4E87A60026F5B2 /* ParseKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C03A4F31C4E87A60026F5B2 /* ParseKeys.plist */; };
 		9C58EBC31C50443500FAEC71 /* CommerceHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C58EBC21C50443500FAEC71 /* CommerceHeaderView.xib */; };
 		9C58EBC61C5044E200FAEC71 /* CommerceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58EBC51C5044E200FAEC71 /* CommerceHeaderView.swift */; };
+		9C58EBC91C504F5600FAEC71 /* PromosCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58EBC81C504F5600FAEC71 /* PromosCellDelegate.swift */; };
 		9C90F3D61C49730400EDF45A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90F3D51C49730400EDF45A /* AppDelegate.swift */; };
 		9C90F3DF1C49730400EDF45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C90F3DE1C49730400EDF45A /* Assets.xcassets */; };
 		9C90F3E21C49730400EDF45A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C90F3E01C49730400EDF45A /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 		9C03A4F31C4E87A60026F5B2 /* ParseKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ParseKeys.plist; sourceTree = "<group>"; };
 		9C58EBC21C50443500FAEC71 /* CommerceHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommerceHeaderView.xib; sourceTree = "<group>"; };
 		9C58EBC51C5044E200FAEC71 /* CommerceHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceHeaderView.swift; sourceTree = "<group>"; };
+		9C58EBC81C504F5600FAEC71 /* PromosCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromosCellDelegate.swift; sourceTree = "<group>"; };
 		9C90F3D21C49730400EDF45A /* Promos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C90F3D51C49730400EDF45A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C90F3DE1C49730400EDF45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,14 +106,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9C58EBBA1C500E9200FAEC71 /* Banner */ = {
+		9C58EBBA1C500E9200FAEC71 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
 				9C58EBC41C5044D000FAEC71 /* Promos Banner */,
-				9C58EBC21C50443500FAEC71 /* CommerceHeaderView.xib */,
-				9C58EBC51C5044E200FAEC71 /* CommerceHeaderView.swift */,
+				9C58EBC71C504F1700FAEC71 /* Commerce Banner */,
 			);
-			name = Banner;
+			name = Headers;
 			sourceTree = "<group>";
 		};
 		9C58EBC41C5044D000FAEC71 /* Promos Banner */ = {
@@ -122,6 +123,15 @@
 				9CC981311C4E910300FE59D3 /* PromosBannerView.xib */,
 			);
 			name = "Promos Banner";
+			sourceTree = "<group>";
+		};
+		9C58EBC71C504F1700FAEC71 /* Commerce Banner */ = {
+			isa = PBXGroup;
+			children = (
+				9C58EBC21C50443500FAEC71 /* CommerceHeaderView.xib */,
+				9C58EBC51C5044E200FAEC71 /* CommerceHeaderView.swift */,
+			);
+			name = "Commerce Banner";
 			sourceTree = "<group>";
 		};
 		9C90F3C91C49730400EDF45A = {
@@ -172,6 +182,7 @@
 			children = (
 				9CCE39261C4C5CA500CD2D2E /* PromoCell.swift */,
 				9CCE39271C4C5CA500CD2D2E /* PromoCell.xib */,
+				9C58EBC81C504F5600FAEC71 /* PromosCellDelegate.swift */,
 			);
 			name = "Promo Cell";
 			sourceTree = "<group>";
@@ -227,7 +238,7 @@
 			children = (
 				9CAE94D71C4C649E005058DB /* Promo Cell */,
 				9CAE94ED1C4C8140005058DB /* Commerce Cell */,
-				9C58EBBA1C500E9200FAEC71 /* Banner */,
+				9C58EBBA1C500E9200FAEC71 /* Headers */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -409,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CAE94EB1C4C8138005058DB /* CommerceCell.swift in Sources */,
+				9C58EBC91C504F5600FAEC71 /* PromosCellDelegate.swift in Sources */,
 				9CD75CA01C4DD9DE00879137 /* UrbanAirshipService.swift in Sources */,
 				9C58EBC61C5044E200FAEC71 /* CommerceHeaderView.swift in Sources */,
 				9CC981321C4E910300FE59D3 /* PromosBannerView.swift in Sources */,

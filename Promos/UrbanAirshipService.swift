@@ -19,6 +19,7 @@ class UrbanAirshipService {
         Alamofire.request(.GET, "https://wallet-api.urbanairship.com/v1/download/pass/\(id)", parameters: nil).responseData
             { response in
             
+                
                 print(response.request)  // original URL request
                 print(response.response) // URL response
                 print(response.data)     // server data
