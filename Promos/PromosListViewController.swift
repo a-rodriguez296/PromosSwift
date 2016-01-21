@@ -10,6 +10,7 @@ import UIKit
 import ParseUI
 import Parse
 import PassKit
+import MBProgressHUD
 
 class PromosListViewController: ParseQueryViewController, PromosBannerDelegate, PromosCellDelegate, PKAddPassesViewControllerDelegate {
 
@@ -82,7 +83,13 @@ class PromosListViewController: ParseQueryViewController, PromosBannerDelegate, 
         let promo = objectAtIndexPath(indexPath) as! Promo
         
         
+        let progressHud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+        progressHud.labelText = NSLocalizedString("Cargando", comment: "Mensaje progress hud")
+
+        
         UrbanAirshipService.dowloadPass(promo.passURL) { [unowned self] (data) -> (Void) in
+            
+            progressHud.hide(true)
             
             if PKPassLibrary.isPassLibraryAvailable(){
                 

@@ -10,6 +10,7 @@ import UIKit
 import ParseUI
 import PassKit
 import Social
+import MBProgressHUD
 
 class PromoDetailViewController: UIViewController, PKAddPassesViewControllerDelegate {
     
@@ -48,8 +49,13 @@ class PromoDetailViewController: UIViewController, PKAddPassesViewControllerDele
     
     @IBAction func didTapDownloadPass(sender: AnyObject) {
         
-        UrbanAirshipService.dowloadPass(promo!.passURL) { [unowned self] (data) -> (Void) in
+        
+        
+        let progressHud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+        progressHud.labelText = NSLocalizedString("Cargando", comment: "Mensaje progress hud")
+        UrbanAirshipService.dowloadPass(promo!.passURL) { [unowned self, progressHud] (data) -> (Void) in
             
+            progressHud.hide(true)
             
             if PKPassLibrary.isPassLibraryAvailable(){
                 

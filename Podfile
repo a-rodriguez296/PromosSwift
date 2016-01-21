@@ -9,6 +9,7 @@ pod 'Parse'
 pod 'ParseUI'
 pod 'Alamofire'
 pod 'iCarousel'
+pod 'MBProgressHUD', '~> 0.9.2'
 #pod 'UrbanAirship-iOS-SDK/All'
 
 
