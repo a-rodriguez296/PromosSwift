@@ -53,15 +53,13 @@ class PromoDetailViewController: UIViewController, PKAddPassesViewControllerDele
         
         let progressHud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         progressHud.labelText = NSLocalizedString("Cargando", comment: "Mensaje progress hud")
-        UrbanAirshipService.dowloadPass(promo!.passURL) { [unowned self, progressHud] (data) -> (Void) in
+        UrbanAirshipService.dowloadPass(promo!.passURL) { [unowned self, progressHud] (pass) -> (Void) in
             
             progressHud.hide(true)
             
             if PKPassLibrary.isPassLibraryAvailable(){
                 
-                let newPass = PKPass(data: data, error: nil)
-                let passVC = PKAddPassesViewController(pass: newPass)
-                
+                let passVC = PKAddPassesViewController(pass: pass)
                 passVC.delegate = self
                 self.presentViewController(passVC, animated: true, completion: nil)
             }

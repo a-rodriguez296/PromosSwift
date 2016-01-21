@@ -37,6 +37,7 @@
 		9CDB9F461C49AAB90096F256 /* CommerceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F451C49AAB90096F256 /* CommerceListViewController.swift */; };
 		9CDB9F481C49AFFA0096F256 /* ParseQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F471C49AFFA0096F256 /* ParseQueryViewController.swift */; };
 		9CDB9F4A1C49C0200096F256 /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB9F491C49C0200096F256 /* Promo.swift */; };
+		9CDE4E1A1C51991000B8C8B9 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE4E191C51991000B8C8B9 /* Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		9CDB9F471C49AFFA0096F256 /* ParseQueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseQueryViewController.swift; sourceTree = "<group>"; };
 		9CDB9F491C49C0200096F256 /* Promo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promo.swift; sourceTree = "<group>"; };
 		9CDB9F4B1C49C2CF0096F256 /* Promos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Promos-Bridging-Header.h"; sourceTree = "<group>"; };
+		9CDE4E191C51991000B8C8B9 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		E1DEBBCEC2A4A6DB4874552D /* Pods_Promos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				9CD75C9F1C4DD9DE00879137 /* UrbanAirshipService.swift */,
+				9CDE4E191C51991000B8C8B9 /* Alamofire.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				9C58EBC61C5044E200FAEC71 /* CommerceHeaderView.swift in Sources */,
 				9CC981321C4E910300FE59D3 /* PromosBannerView.swift in Sources */,
 				9CAE94DC1C4C7272005058DB /* ColorUtils.swift in Sources */,
+				9CDE4E1A1C51991000B8C8B9 /* Alamofire.swift in Sources */,
 				9CDB9F431C49A4D50096F256 /* Constants.swift in Sources */,
 				9CDB9F4A1C49C0200096F256 /* Promo.swift in Sources */,
 				9CAE94DF1C4C7314005058DB /* Color.swift in Sources */,

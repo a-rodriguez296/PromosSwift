@@ -58,6 +58,11 @@ struct Constants {
         }
     }
     
+    struct UrbanAirship {
+        static let BaseURL = "https://wallet-api.urbanairship.com/v1/"
+        static let downloadPassEndpoint = "download/pass/"
+    }
+    
     
     
     
