@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2AAC36D0C42EA4E8651052 /* Pods_PromosAle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FA81E136A5A6A5A8588E50 /* Pods_PromosAle.framework */; };
 		9162A339F27D15F99BF5DB7A /* Pods_Promos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DEBBCEC2A4A6DB4874552D /* Pods_Promos.framework */; };
 		9C03A4F41C4E87A60026F5B2 /* ParseKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C03A4F31C4E87A60026F5B2 /* ParseKeys.plist */; };
 		9C58EBC31C50443500FAEC71 /* CommerceHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C58EBC21C50443500FAEC71 /* CommerceHeaderView.xib */; };
@@ -41,13 +42,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		312E15E1714C65EF5FF8D269 /* Pods-Promos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Promos/Pods-Promos.release.xcconfig"; sourceTree = "<group>"; };
-		81187DCD3937F938C56344EA /* Pods-Promos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Promos/Pods-Promos.debug.xcconfig"; sourceTree = "<group>"; };
+		14FA81E136A5A6A5A8588E50 /* Pods_PromosAle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PromosAle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C03A4F31C4E87A60026F5B2 /* ParseKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ParseKeys.plist; sourceTree = "<group>"; };
 		9C58EBC21C50443500FAEC71 /* CommerceHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommerceHeaderView.xib; sourceTree = "<group>"; };
 		9C58EBC51C5044E200FAEC71 /* CommerceHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceHeaderView.swift; sourceTree = "<group>"; };
 		9C58EBC81C504F5600FAEC71 /* PromosCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromosCellDelegate.swift; sourceTree = "<group>"; };
-		9C90F3D21C49730400EDF45A /* Promos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C90F3D21C49730400EDF45A /* PromosAle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PromosAle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C90F3D51C49730400EDF45A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C90F3DE1C49730400EDF45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C90F3E11C49730400EDF45A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +76,8 @@
 		9CDB9F491C49C0200096F256 /* Promo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promo.swift; sourceTree = "<group>"; };
 		9CDB9F4B1C49C2CF0096F256 /* Promos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Promos-Bridging-Header.h"; sourceTree = "<group>"; };
 		9CDE4E191C51991000B8C8B9 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		A3041E98A710147EAED7728E /* Pods-PromosAle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromosAle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PromosAle/Pods-PromosAle.debug.xcconfig"; sourceTree = "<group>"; };
+		C5CF633AA571A69C523301F0 /* Pods-PromosAle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromosAle.release.xcconfig"; path = "Pods/Target Support Files/Pods-PromosAle/Pods-PromosAle.release.xcconfig"; sourceTree = "<group>"; };
 		E1DEBBCEC2A4A6DB4874552D /* Pods_Promos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9162A339F27D15F99BF5DB7A /* Pods_Promos.framework in Frameworks */,
+				1E2AAC36D0C42EA4E8651052 /* Pods_PromosAle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				E1DEBBCEC2A4A6DB4874552D /* Pods_Promos.framework */,
+				14FA81E136A5A6A5A8588E50 /* Pods_PromosAle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,8 +106,8 @@
 		9AC1D36AD5031105B581ABAD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				81187DCD3937F938C56344EA /* Pods-Promos.debug.xcconfig */,
-				312E15E1714C65EF5FF8D269 /* Pods-Promos.release.xcconfig */,
+				A3041E98A710147EAED7728E /* Pods-PromosAle.debug.xcconfig */,
+				C5CF633AA571A69C523301F0 /* Pods-PromosAle.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -149,7 +153,7 @@
 		9C90F3D31C49730400EDF45A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C90F3D21C49730400EDF45A /* Promos.app */,
+				9C90F3D21C49730400EDF45A /* PromosAle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,9 +300,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C90F3D11C49730400EDF45A /* Promos */ = {
+		9C90F3D11C49730400EDF45A /* PromosAle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C90F3E61C49730400EDF45A /* Build configuration list for PBXNativeTarget "Promos" */;
+			buildConfigurationList = 9C90F3E61C49730400EDF45A /* Build configuration list for PBXNativeTarget "PromosAle" */;
 			buildPhases = (
 				B90F2B2267914986A34E5F48 /* Check Pods Manifest.lock */,
 				9C90F3CE1C49730400EDF45A /* Sources */,
@@ -306,14 +310,15 @@
 				9C90F3D01C49730400EDF45A /* Resources */,
 				2305CE89442FAA239DE6008D /* Embed Pods Frameworks */,
 				8AF20C753472DBDEA2EFF59F /* Copy Pods Resources */,
+				9CFA85791C59B444008C3F67 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Promos;
+			name = PromosAle;
 			productName = Promos;
-			productReference = 9C90F3D21C49730400EDF45A /* Promos.app */;
+			productReference = 9C90F3D21C49730400EDF45A /* PromosAle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -331,7 +336,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9C90F3CD1C49730400EDF45A /* Build configuration list for PBXProject "Promos" */;
+			buildConfigurationList = 9C90F3CD1C49730400EDF45A /* Build configuration list for PBXProject "PromosAle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -344,7 +349,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C90F3D11C49730400EDF45A /* Promos */,
+				9C90F3D11C49730400EDF45A /* PromosAle */,
 			);
 		};
 /* End PBXProject section */
@@ -382,7 +387,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Promos/Pods-Promos-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PromosAle/Pods-PromosAle-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8AF20C753472DBDEA2EFF59F /* Copy Pods Resources */ = {
@@ -397,8 +402,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Promos/Pods-Promos-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PromosAle/Pods-PromosAle-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9CFA85791C59B444008C3F67 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}\"/Fabric/run 5970ed33f5735004e955c3982386f58b5f482347 e543079f70bce379d8a1e9bbfe4c216153260f07a8a96180216581602a973a32";
 		};
 		B90F2B2267914986A34E5F48 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -542,14 +560,20 @@
 		};
 		9C90F3E71C49730400EDF45A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81187DCD3937F938C56344EA /* Pods-Promos.debug.xcconfig */;
+			baseConfigurationReference = A3041E98A710147EAED7728E /* Pods-PromosAle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alejandro Rodriguez (LHT5Q4MLB8)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Promos",
+				);
 				INFOPLIST_FILE = Promos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arf.Promos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PromosAle;
+				PROVISIONING_PROFILE = "cfb23e38-8794-427f-9e03-1fe670413fe6";
 				SWIFT_OBJC_BRIDGING_HEADER = "Promos/Promos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -557,14 +581,20 @@
 		};
 		9C90F3E81C49730400EDF45A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 312E15E1714C65EF5FF8D269 /* Pods-Promos.release.xcconfig */;
+			baseConfigurationReference = C5CF633AA571A69C523301F0 /* Pods-PromosAle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alejandro Rodriguez (LHT5Q4MLB8)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Promos",
+				);
 				INFOPLIST_FILE = Promos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arf.Promos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PromosAle;
+				PROVISIONING_PROFILE = "cfb23e38-8794-427f-9e03-1fe670413fe6";
 				SWIFT_OBJC_BRIDGING_HEADER = "Promos/Promos-Bridging-Header.h";
 			};
 			name = Release;
@@ -572,7 +602,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C90F3CD1C49730400EDF45A /* Build configuration list for PBXProject "Promos" */ = {
+		9C90F3CD1C49730400EDF45A /* Build configuration list for PBXProject "PromosAle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C90F3E41C49730400EDF45A /* Debug */,
@@ -581,7 +611,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C90F3E61C49730400EDF45A /* Build configuration list for PBXNativeTarget "Promos" */ = {
+		9C90F3E61C49730400EDF45A /* Build configuration list for PBXNativeTarget "PromosAle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C90F3E71C49730400EDF45A /* Debug */,
